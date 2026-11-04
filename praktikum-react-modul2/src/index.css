@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Instrument+Sans:wght@400..700&display=swap");
+
+:root {
+  --kertas: #f3f5fa;
+  --putih: #ffffff;
+  --tinta: #0e1330;
+  --tinta-lembut: #4a5170;
+  --kobalt: #3347ff;
+  --matahari: #ffd23f;
+  --mint: #3ddc97;
+  --koral: #ff7a66;
+
+  --font-judul: "Bricolage Grotesque", system-ui, sans-serif;
+  --font-isi: "Instrument Sans", system-ui, sans-serif;
+
+  color-scheme: light;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-isi);
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--tinta);
+  background-color: var(--putih);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,h2,h3,p,dl,dd,ul {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+:focus-visible {
+  outline: 3px solid var(--kobalt);
+  outline-offset: 3px;
+}
