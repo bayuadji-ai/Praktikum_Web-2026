@@ -1,0 +1,91 @@
+:root { --garis: 2px solid var(--tinta); }
+
+.judul, .seksi-judul, .profil-nama, .proyek-judul, .matkul-hari {
+  font-family: var(--font-judul);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.kartu-profil, .matkul, .kartu-proyek { background: var(--putih); border: var(--garis); }
+
+.halaman { max-width: 1040px; margin: 0 auto; padding: 56px 24px 80px; }
+.hero { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 48px; align-items: start; margin-bottom: 72px; }
+.hero-teks { padding-top: 12px; }
+.judul { font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 800; line-height: 1; letter-spacing: -0.035em; }
+.subjudul { max-width: 34ch; margin-top: 20px; font-size: 1.125rem; color: var(--tinta-lembut); }
+
+.seksi { margin-bottom: 64px; }
+.seksi-kepala { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 4px 16px; padding-bottom: 10px; margin-bottom: 24px; border-bottom: var(--garis); }
+.seksi-judul { font-size: 1.5rem; }
+.seksi-meta { font-size: 0.9rem; font-weight: 500; color: var(--tinta-lembut); }
+
+.kartu-profil { padding: 24px; border-radius: 12px; box-shadow: 6px 6px 0 var(--kobalt); }
+.profil-atas { display: flex; align-items: center; gap: 20px; }
+.profil-foto { flex-shrink: 0; width: 88px; height: 88px; object-fit: cover; background: var(--matahari); border: var(--garis); border-radius: 14px; }
+.profil-nama { font-size: 1.5rem; line-height: 1.15; }
+.profil-data { display: grid; grid-template-columns: auto 1fr; gap: 2px 12px; margin-top: 8px; font-size: 0.95rem; }
+.profil-data dt { color: var(--tinta-lembut); }
+.profil-data dd { font-weight: 600; }
+.profil-bawah { margin-top: 20px; padding-top: 16px; border-top: 1.5px dashed rgba(14, 19, 48, 0.3); }
+.status { display: inline-flex; align-items: center; gap: 8px; padding: 4px 12px; border: 1.5px solid var(--tinta); border-radius: 999px; font-size: 0.85rem; font-weight: 600; }
+.status-aktif { background: #c8f5dd; }
+.status-lain { background: #ffe9a8; }
+.status-titik { width: 8px; height: 8px; border-radius: 50%; background: var(--tinta); }
+
+.keahlian { margin-top: 32px; }
+.keahlian-judul { margin-bottom: 12px; font-size: 1rem; font-weight: 600; }
+.daftar-skill { display: flex; flex-wrap: wrap; gap: 10px; }
+.badge-skill { display: inline-flex; align-items: center; gap: 10px; padding: 6px 14px; background: var(--warna-level); border: 1.5px solid var(--tinta); border-radius: 999px; font-size: 0.9rem; font-weight: 600; }
+.badge-level { display: inline-flex; align-items: center; gap: 6px; font-size: 0.75rem; font-weight: 500; }
+.titik-level { display: inline-flex; gap: 3px; }
+.titik { width: 7px; height: 7px; border: 1.5px solid var(--tinta); border-radius: 50%; }
+.titik-isi { background: var(--tinta); }
+
+.badge-pemula { --warna-level: #fff0b8; }
+.badge-menengah { --warna-level: #cfe0ff; }
+.badge-mahir { --warna-level: #c8f5dd; }
+.badge-netral { --warna-level: #e8eaf0; }
+
+.daftar-matkul { display: grid; gap: 12px; }
+.matkul { display: grid; grid-template-columns: 96px 1fr auto; align-items: center; gap: 20px; padding: 14px 18px; border-radius: 10px; }
+.matkul-hari { padding: 8px 0; background: var(--matahari); border: var(--garis); border-radius: 8px; text-align: center; }
+.matkul-kode { display: block; font-size: 0.85rem; font-weight: 700; color: var(--kobalt); }
+.matkul-nama { font-size: 1.05rem; font-weight: 600; line-height: 1.3; }
+.matkul-sks { padding: 4px 12px; border: var(--garis); border-radius: 999px; font-size: 0.9rem; font-weight: 700; white-space: nowrap; }
+
+.daftar-proyek { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: 28px; }
+.kartu-proyek { --aksen: var(--kobalt); display: flex; flex-direction: column; gap: 12px; padding: 22px; border-radius: 12px; box-shadow: 5px 5px 0 var(--aksen); }
+.kartu-proyek:nth-child(4n + 2) { --aksen: var(--matahari); }
+.kartu-proyek:nth-child(4n + 3) { --aksen: var(--mint); }
+.kartu-proyek:nth-child(4n + 4) { --aksen: var(--koral); }
+.proyek-judul { font-size: 1.3rem; line-height: 1.2; }
+.proyek-deskripsi { flex-grow: 1; color: var(--tinta-lembut); }
+.tagar { display: flex; flex-wrap: wrap; gap: 6px; }
+.tagar li { padding: 2px 8px; background: var(--kertas); border: 1.5px solid var(--tinta); border-radius: 6px; font-size: 0.8rem; font-weight: 600; }
+.tombol-repo-nonaktif { align-self: flex-start; padding: 9px 16px; border: 2px dashed rgba(14, 19, 48, 0.35); border-radius: 8px; color: var(--tinta-lembut); cursor: not-allowed; }
+
+.tombol-repo, .tombol-utama {
+  border: var(--garis);
+  box-shadow: var(--s) var(--s) 0 var(--bayang);
+  font-weight: 600;
+  transition: transform 0.12s, box-shadow 0.12s;
+}
+.tombol-repo { --s: 3px; --bayang: var(--aksen); align-self: flex-start; padding: 9px 16px; background: var(--tinta); border-radius: 8px; color: var(--putih); text-decoration: none; }
+.tombol-utama { --s: 5px; --bayang: var(--tinta); padding: 14px 28px; background: var(--kobalt); border-radius: 10px; color: var(--putih); font-family: inherit; font-size: 1rem; font-weight: 700; 
+  cursor: pointer; }
+.tombol-repo:hover, .tombol-utama:hover { transform: translate(-1px, -1px); box-shadow: calc(var(--s) + 1px) calc(var(--s) + 1px) 0 var(--bayang); }
+.tombol-repo:active, .tombol-utama:active { transform: translate(2px, 2px); box-shadow: 1px 1px 0 var(--bayang); }
+.aksi { display: flex; justify-content: center; margin-top: 16px; }
+
+@media (max-width: 860px) {
+  .hero { grid-template-columns: minmax(0, 1fr); gap: 36px; margin-bottom: 56px; }
+}
+@media (max-width: 560px) {
+  .halaman { padding: 36px 16px 64px; }
+  .profil-atas { align-items: flex-start; }
+  .matkul { grid-template-columns: 76px 1fr; gap: 14px; }
+  .matkul-sks { grid-column: 2; justify-self: start; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .tombol-repo, .tombol-utama { transition: none; }
+}
