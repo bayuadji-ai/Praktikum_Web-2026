@@ -8,7 +8,6 @@ function ItemTugas({ tugas, onUbahStatus, onHapus }) {
         onChange={() => onUbahStatus(tugas.id)}
       />
 
-      {/* className dinamis: dicoret jika tugas sudah selesai */}
       <span className={tugas.selesai ? 'selesai' : ''}>{tugas.judul}</span>
 
       <button

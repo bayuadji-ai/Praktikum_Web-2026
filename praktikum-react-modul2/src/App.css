@@ -1,26 +1,27 @@
-/* src/App.css - gaya semua komponen (dipakai lewat className) */
 :root { --garis: 2px solid var(--tinta); }
 
-/* ---------- Halaman ---------- */
 .wadah { max-width: 680px; margin: 0 auto; padding: 48px 20px 80px; }
-.judul { font-family: var(--font-judul); font-size: clamp(2.2rem, 7vw, 3.4rem); font-weight: 800; line-height: 1.05; letter-spacing: -0.035em; }
+.judul { font-family: var(--font-judul); font-size: clamp(2.2rem, 7vw, 3.4rem); font-weight: 800; 
+  line-height: 1.05; letter-spacing: -0.035em; }
 .subjudul { margin: 12px 0 32px; color: var(--tinta-lembut); font-size: 1.05rem; }
-.bagian { margin: 56px 0 20px; padding-bottom: 10px; border-bottom: var(--garis); font-family: var(--font-judul); font-size: 1.6rem; letter-spacing: -0.02em; }
+.bagian { margin: 56px 0 20px; padding-bottom: 10px; border-bottom: var(--garis);
+   font-family: var(--font-judul); font-size: 1.6rem; letter-spacing: -0.02em; }
 
-/* ---------- Kartu pembungkus ---------- */
-.kartu { margin-bottom: 28px; padding: 22px; background: var(--putih); border: var(--garis); border-radius: 12px; box-shadow: 5px 5px 0 var(--aksen, var(--kobalt)); }
+.kartu { margin-bottom: 28px; padding: 22px; background: var(--putih); border: var(--garis);
+   border-radius: 12px; box-shadow: 5px 5px 0 var(--aksen, var(--kobalt)); }
 .kartu h2 { margin-bottom: 14px; font-family: var(--font-judul); font-size: 1.15rem; letter-spacing: -0.01em; }
 .kartu > p { margin-bottom: 12px; }
 .tema-uang { --aksen: var(--mint); }
 
-/* ---------- Formulir ---------- */
 .baris { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 8px; }
-.input { flex: 1; min-width: 140px; padding: 10px 12px; background: var(--putih); border: 1.5px solid var(--tinta); border-radius: 8px; font: inherit; font-size: 0.95rem; }
+.input { flex: 1; min-width: 140px; padding: 10px 12px; background: var(--putih); 
+  border: 1.5px solid var(--tinta); border-radius: 8px; font: inherit; font-size: 0.95rem; }
 .pilihan { flex: 0 0 auto; min-width: 0; }
 .galat { margin-top: 6px; color: #c81e1e; font-size: 0.85rem; font-weight: 500; }
 
-/* ---------- Tombol ---------- */
-.tombol { padding: 10px 16px; background: var(--kobalt); border: var(--garis); border-radius: 8px; box-shadow: 3px 3px 0 var(--tinta); color: var(--putih); font: inherit; font-size: 0.95rem; font-weight: 700; cursor: pointer; transition: transform 0.12s, box-shadow 0.12s; }
+.tombol { padding: 10px 16px; background: var(--kobalt); border: var(--garis);
+   border-radius: 8px; box-shadow: 3px 3px 0 var(--tinta); color: var(--putih); font: inherit; 
+  font-size: 0.95rem; font-weight: 700; cursor: pointer; transition: transform 0.12s, box-shadow 0.12s; }
 .tombol:hover:not(:disabled) { transform: translate(-1px, -1px); box-shadow: 4px 4px 0 var(--tinta); }
 .tombol:active:not(:disabled) { transform: translate(2px, 2px); box-shadow: 1px 1px 0 var(--tinta); }
 .tombol:disabled { background: #d4d7e0; border-color: #9aa0b4; box-shadow: none; color: #6b7190; cursor: not-allowed; }
@@ -28,13 +29,12 @@
 .tombol-kecil { padding: 5px 10px; font-size: 0.8rem; box-shadow: 2px 2px 0 var(--tinta); }
 .aksi-massal { margin-top: 16px; }
 
-/* ---------- Filter (Latihan 1) ---------- */
 .filter { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 8px; }
-.tombol-filter { padding: 6px 14px; background: var(--putih); border: 1.5px solid var(--tinta); border-radius: 999px; font: inherit; font-size: 0.85rem; font-weight: 600; cursor: pointer; }
+.tombol-filter { padding: 6px 14px; background: var(--putih); border: 1.5px solid var(--tinta); 
+  border-radius: 999px; font: inherit; font-size: 0.85rem; font-weight: 600; cursor: pointer; }
 .tombol-filter:hover { background: var(--kertas); }
 .tombol-filter.aktif { background: var(--tinta); color: var(--putih); }
 
-/* ---------- Daftar ---------- */
 .ringkasan { margin-bottom: 12px; color: var(--tinta-lembut); font-size: 0.9rem; font-weight: 500; }
 .item { display: flex; align-items: center; gap: 12px; padding: 12px 0; border-bottom: 1px solid #e5e7eb; }
 .item:last-child { border-bottom: none; }
@@ -43,9 +43,9 @@
 .selesai { color: #9aa0b4; text-decoration: line-through; }
 .kosong { padding: 16px 0; color: var(--tinta-lembut); font-style: italic; text-align: center; }
 
-/* ---------- Catatan keuangan (Tugas 3) ---------- */
 .ringkasan-saldo { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
-.ringkasan-saldo div { display: flex; flex-direction: column; padding: 12px; border: 1.5px solid var(--tinta); border-radius: 8px; }
+.ringkasan-saldo div { display: flex; flex-direction: column; padding: 12px;
+   border: 1.5px solid var(--tinta); border-radius: 8px; }
 .ringkasan-saldo span { color: var(--tinta-lembut); font-size: 0.8rem; }
 .ringkasan-saldo strong { font-family: var(--font-judul); font-size: 1.1rem; }
 .pemasukan { color: #0b7a43; }

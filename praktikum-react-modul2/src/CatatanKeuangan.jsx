@@ -1,4 +1,3 @@
-// src/CatatanKeuangan.jsx - Tugas 3: komponen induk yang menyimpan state transaksi
 import { useState, useEffect } from 'react';
 import Kartu from './Kartu';
 import FormTransaksi from './FormTransaksi';
@@ -8,22 +7,19 @@ import RingkasanSaldo from './RingkasanSaldo';
 const KUNCI_STORAGE = 'catatan-keuangan';
 
 function CatatanKeuangan() {
-  // State utama: ambil dari localStorage dulu, jika kosong mulai dari array kosong
   const [daftarTransaksi, setDaftarTransaksi] = useState(() => {
     try {
       const dataTersimpan = localStorage.getItem(KUNCI_STORAGE);
       return dataTersimpan ? JSON.parse(dataTersimpan) : [];
     } catch {
-      return []; // isi localStorage rusak, mulai dari kosong
+      return []; 
     }
   });
 
-  // Efek: simpan ke localStorage setiap kali daftarTransaksi berubah
   useEffect(() => {
     localStorage.setItem(KUNCI_STORAGE, JSON.stringify(daftarTransaksi));
   }, [daftarTransaksi]);
 
-  // Pembaruan immutable: buat array BARU, transaksi terbaru di paling atas
   const tambahTransaksi = (transaksiBaru) => {
     setDaftarTransaksi([transaksiBaru, ...daftarTransaksi]);
   };
@@ -32,7 +28,6 @@ function CatatanKeuangan() {
     setDaftarTransaksi(daftarTransaksi.filter((transaksi) => transaksi.id !== id));
   };
 
-  // Nilai turunan: dihitung dari state, tidak disimpan sebagai state baru
   const totalPemasukan = daftarTransaksi
     .filter((transaksi) => transaksi.jenis === 'pemasukan')
     .reduce((jumlah, transaksi) => jumlah + transaksi.nominal, 0);

@@ -1,4 +1,3 @@
-// src/RingkasanSaldo.jsx - menampilkan total pemasukan, pengeluaran, dan saldo (Tugas 3)
 import { formatRupiah } from './formatRupiah';
 
 function RingkasanSaldo({ totalPemasukan, totalPengeluaran, saldo }) {

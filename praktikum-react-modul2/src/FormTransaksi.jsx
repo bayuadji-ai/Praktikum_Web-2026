@@ -1,13 +1,10 @@
-// src/FormTransaksi.jsx - formulir terkendali untuk mencatat transaksi (Tugas 3)
 import { useState } from 'react';
 
 function FormTransaksi({ onTambah }) {
-  // Satu state untuk setiap input, semuanya berupa teks
   const [keterangan, setKeterangan] = useState('');
   const [nominal, setNominal] = useState('');
   const [jenis, setJenis] = useState('pemasukan');
 
-  // Nilai dari input selalu teks, jadi diubah ke angka dulu sebelum dipakai
   const nominalAngka = Number(nominal);
 
   const keteranganTerlaluPanjang = keterangan.length > 50;
@@ -19,7 +16,6 @@ function FormTransaksi({ onTambah }) {
     event.preventDefault();
     if (tidakValid) return;
 
-    // "Melapor" ke komponen induk dengan satu objek transaksi baru
     onTambah({
       id: Date.now(),
       keterangan: keterangan.trim(),

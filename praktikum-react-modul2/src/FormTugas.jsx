@@ -1,20 +1,17 @@
-// src/FormTugas.jsx
 import { useState } from 'react';
 
 function FormTugas({ onTambah }) {
-  // State lokal untuk menampung isi input
   const [teks, setTeks] = useState('');
 
-  // Validasi sederhana: tidak boleh kosong dan maksimal 50 karakter
   const terlaluPanjang = teks.length > 50;
   const tidakValid = teks.trim() === '' || terlaluPanjang;
 
   const tanganiKirim = (event) => {
-    event.preventDefault(); // mencegah halaman reload saat formulir dikirim
-    if (tidakValid) return; // hentikan jika input tidak valid
+    event.preventDefault(); 
+    if (tidakValid) return; 
 
-    onTambah(teks.trim()); // "melapor" ke komponen induk (App)
-    setTeks(''); // kosongkan kembali input
+    onTambah(teks.trim()); 
+    setTeks(''); 
   };
 
   return (

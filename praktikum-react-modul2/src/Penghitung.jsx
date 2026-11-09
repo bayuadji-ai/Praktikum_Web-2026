@@ -1,9 +1,7 @@
-// src/Penghitung.jsx (versi benar dengan useState)
 import { useState } from 'react';
 import Kartu from './Kartu';
 
 function Penghitung() {
-  // jumlah = nilai saat ini, setJumlah = fungsi untuk mengubahnya, 0 = nilai awal
   const [jumlah, setJumlah] = useState(0);
 
   const tambah = () => {
@@ -18,7 +16,6 @@ function Penghitung() {
     <Kartu judul="Penghitung Klik">
       <p>Tombol sudah diklik {jumlah} kali</p>
 
-      {/* Conditional rendering: pesan ini hanya muncul jika jumlah >= 5 */}
       {jumlah >= 5 && <p>Wah, kamu rajin sekali mengklik!</p>}
 
       <div className="baris">
